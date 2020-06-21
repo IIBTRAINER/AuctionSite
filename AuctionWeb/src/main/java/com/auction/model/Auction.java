@@ -1,0 +1,92 @@
+package com.auction.model;
+
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+/**
+ * Date :Aug 18,2019
+ * @author Rishi
+ * @version 1.0
+ *
+ */
+@Entity
+@Table(name = "Auction")  
+public class Auction  {
+	
+	@Id
+	private int id ;
+  
+	
+	@Column(name ="currbid")
+	private String currbid;
+	
+	@Column(name ="resprice")
+	private String resprice;
+	
+	@Column(name ="bidname")
+	private String bidname;
+
+
+	public Auction() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public Auction(int id, String currbid, String resprice, String bidname) {
+		super();
+		this.id = id;
+		this.currbid = currbid;
+		this.resprice = resprice;
+		this.bidname = bidname;
+	}
+
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	
+	public String getCurrbid() {
+		return currbid;
+	}
+
+	public void setCurrbid(String currbid) {
+		this.currbid = currbid;
+	}
+
+	public String getResprice() {
+		return resprice;
+	}
+
+	public void setResprice(String resprice) {
+		this.resprice = resprice;
+	}
+
+	public String getBidname() {
+		return bidname;
+	}
+
+	public void setBidname(String bidname) {
+		this.bidname = bidname;
+	}
+
+	@Override
+	public String toString() {
+		return "Auction [id=" + id + ", currbid=" + currbid + ", resprice=" + resprice + ", bidname=" + bidname + "]";
+	}
+
+
+	
+}
