@@ -3,9 +3,8 @@ buildscript {
 		springBootVersion = '2.1.5.RELEASE'
 	}
 	repositories {
-		maven { url 'https://www.nexus.ford.com/repository/external-proxy-group' }
-		maven { url 'https://www.nexus.ford.com/repository/public' }
-		maven { url 'https://www.nexus.ford.com/repository/thirdparty' }
+		maven { url "http://repo.maven.apache.org/maven2" }
+		
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -17,14 +16,6 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
-group = 'com.ford.pae'
-version = '0.0.1-SNAPSHOT'
-
-repositories {
-	maven { url 'https://www.nexus.ford.com/repository/external-proxy-group' }
-    maven { url 'https://www.nexus.ford.com/repository/public' }
-    maven { url 'https://www.nexus.ford.com/repository/thirdparty' }
-}
 
 ext {
 	springCloudVersion = 'Greenwich.SR1'
